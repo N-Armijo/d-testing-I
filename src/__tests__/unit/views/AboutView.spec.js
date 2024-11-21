@@ -7,13 +7,11 @@ import App from '@/App.vue'
 describe('AboutView.vue', () => {
   it('Contrasta Snapshot del HTML', () => {
     const wrapper = mount(AboutView)
-
     expect(wrapper.html()).toMatchSnapshot()
   })
-
   it('Muestra la vista About al llegar a través de la ruta', async () => {
     /**
-     * Define configuración base para la prueba
+     * define configuración base para prueba
      */
     const routerPrueba = createRouter({
       history: createWebHistory(),
@@ -25,17 +23,13 @@ describe('AboutView.vue', () => {
         }
       ]
     })
-
     const wrapper = mount(App, {
       global: {
         plugins: [routerPrueba]
       }
     })
-
     routerPrueba.push({ name: 'about' })
-
     await routerPrueba.isReady()
-
     expect(wrapper.findComponent(AboutView).exists()).toBeTruthy()
   })
 })

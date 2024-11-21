@@ -5,7 +5,6 @@ import HomeView from '@/views/HomeView.vue'
 describe('HomeView.vue', () => {
   it('Contrasta Snapshot del HTML', () => {
     const wrapper = mount(HomeView)
-
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

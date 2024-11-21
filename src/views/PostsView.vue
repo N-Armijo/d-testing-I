@@ -1,3 +1,11 @@
+<script setup>
+  const posts = [
+    { id: 1, name: 'Post 1' },
+    { id: 2, name: 'Post 2' },
+    { id: 3, name: 'Post 3' },
+    { id: 4, name: 'Post 4' }
+  ]
+</script>
 <template>
   <div class="posts">
     <h1>Vista de Posts</h1>
@@ -9,18 +17,4 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'PostsViewVue',
-  data() {
-    return {
-      posts: [
-        { id: 1, name: 'Post 1' },
-        { id: 2, name: 'Post 2' },
-        { id: 3, name: 'Post 3' },
-        { id: 4, name: 'Post 4' }
-      ]
-    }
-  }
-}
-</script>
+
