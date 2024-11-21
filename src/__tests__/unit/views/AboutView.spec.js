@@ -9,6 +9,7 @@ describe('AboutView.vue', () => {
     const wrapper = mount(AboutView)
     expect(wrapper.html()).toMatchSnapshot()
   })
+  //No es necesario, pero fue paara simplemente probar
   it('Muestra la vista About al llegar a través de la ruta', async () => {
     /**
      * define configuración base para prueba
